@@ -8,5 +8,76 @@ _t() {
     case "$topcmd" in
         accounts)
             case "$prev" in 
-            -C|--color) 
+            -C|--color) completions='auto never' ;;
+
+            *) completions='--id -i -H --host -C --color -P --profile' ;; 
+            esac;;
+        block)
+            case "$prev" in
+
+            -C|--color) completions='auto never' ;;
+
+            *) completions='--id -i -H --host -C --color -P --profile' ;;
+            esac;;
+        direct_messages)
+            case "$prev" in
+
+            -C|--color) completions='auto never' ;;
+            *) completions='--csv -c --decode-uris -d --long -l --number -n --relative_dates -a --reverse -r -H --host -C --color -P --profile';;
+            esac;;
+        dm)
+            case "$prev" in
+
+            -C|--color) completions='auto never' ;;
+            *) completions='--id -i -H --host -C --color -P --profile';;
+            esac;;
+        does_contain)
+            case "$prev" in
+
+            -C|--color) completions='auto never' ;;
+            *) completions='--id -i -H --host -C --color -P --profile';;
+            esac;;
+        does_follow)
+            case "$prev" in
+
+            -C|--color) completions='auto never' ;;
+            *) completions='--id -i -H --host -C --color -P --profile';;
+            esac;;
+        favorite)
+            case "$prev" in
+
+            -C|--color) completions='auto never' ;;
+            *) completions='--id -i -H --host -C --color -P --profile';;
+            esac;;
+        favorites)
+            case "$prev" in
+
+            -C|--color) completions='auto never' ;;
+            *) completions='--csv -c --decode-uris -d --id -i --long -l --max_id -m --number -n --relative_dates -a --reverse -r --since_id -s -H --host -C --color -P --profile';;
+            esac;;
+        follow)
+            case "$prev" in
+
+            -C|--color) completions='auto never' ;;
+            *) completions='--id -i -H --host -C --color -P --profile';;
+            esac;;
+        followings)
+            case "$prev" in
+
+            --sort|-s)
+                completions='favorites followers friends listed screen_name since tweets tweeted' ;;
+            -C|--color) completions='auto never' ;;
+            *) completions='--csv -c --decode-uris -d --id -i --long -l --max_id -m --number -n --relative_dates -a --reverse -r --since_id -s -H --host -C --color -P --profile';;
+            esac;;
+        followings_following)
+            case "$prev" in
+
+            --sort|-s)
+                completions='favorites followers friends listed screen_name since tweets tweeted' ;;
+            -C|--color) completions='auto never' ;;
+            *) completions='--csv -c --decode-uris -d --id -i --long -l --max_id -m --number -n --relative_dates -a --reverse -r --since_id -s -H --host -C --color -P --profile';;
+            esac;;
+         
+        
+
 }
